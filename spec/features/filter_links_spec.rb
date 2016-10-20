@@ -1,3 +1,4 @@
+require 'spec_helper'
 require "./app/models/link"
 
 describe "filter_links" do
