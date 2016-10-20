@@ -13,6 +13,9 @@
         <li>
           Title:  <%= link.title %>
           URL:    <a href="<%= link.url %>"><%= link.url %></a>
+          Tag:    <% link.tags.each do |tag| %>
+                   <%= tag.tag_name %>
+                  <% end %>
         </li>
       <% end %>
     </ul>
