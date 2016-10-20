@@ -31,8 +31,8 @@ class BookmarkManager < Sinatra::Base
     erb :add_link
   end
 
-  get "/tags/bubbles" do
-    @links = Link.all(:tags => { :tag_name => 'bubbles' })
+  get "/tags/:name" do
+    @links = Link.all(:tags => { :tag_name => params[:name] })
     erb :links
   end
 
