@@ -31,6 +31,11 @@ class BookmarkManager < Sinatra::Base
     erb :add_link
   end
 
+  get "/tags/bubbles" do
+    @links = Link.all(:tags => { :tag_name => 'bubbles' })
+    erb :links
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
