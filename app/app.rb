@@ -14,6 +14,11 @@ class BookmarkManager < Sinatra::Base
     erb :index
   end
 
+  post "/password" do
+
+    redirect "/links"
+  end
+
   get '/links' do
     @links = Link.all
     erb :links
